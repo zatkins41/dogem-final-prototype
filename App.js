@@ -6,6 +6,7 @@ import LoginScreen from './Screens/Login'
 import HomeScreen from './Screens/Home'
 import DogemScreen from './Screens/Dogem'
 import ContactScreen from './Screens/Contact'
+import RegisterScreen from './Screens/Register'
 const Stack = createNativeStackNavigator();
 
 const MyStack = () => {
@@ -13,6 +14,7 @@ const MyStack = () => {
         <NavigationContainer>
             <Stack.Navigator>
                 <Stack.Screen name="Home" component={HomeScreen} />
+                <Stack.Screen name="Register" component={RegisterScreen} options={{title:'Register'} }/>
                 <Stack.Screen
                     name="Login"
                     component={LoginScreen}
