@@ -81,7 +81,6 @@ const styles = StyleSheet.create({
         margin: 12, //Length apart of other Fields around it
         borderWidth: 1,
         padding: 10, //Padding of placeholder
-      },
-
+      },  
 })
 export default Register;
