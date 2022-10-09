@@ -36,7 +36,6 @@ const Register = ({ navigation }) => {
                 
             <TouchableOpacity style={styles.registerBtn} onPress={() => Alert.alert('Registration Success')}>
                 <Text style={styles.registerBtn_text}>Register</Text>
-
             </TouchableOpacity>
         </View>
     );
