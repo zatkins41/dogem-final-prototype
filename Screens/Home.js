@@ -44,7 +44,7 @@ const App = ({navigation })=> {
             <TouchableOpacity>
                 <Text style={styles.forgot_button}>Forgot Password?</Text>
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate('Register')}>
                 <Text style={styles.forgot_button}>Don't have an account ? Register</Text>
             </TouchableOpacity>
 
