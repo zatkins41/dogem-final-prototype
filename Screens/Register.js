@@ -43,6 +43,7 @@ const Register = ({ navigation }) => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        backgroundColor: "#fff",
         alignItems: "center",
         justifyContent: 'center', 
     },
@@ -79,7 +80,8 @@ const styles = StyleSheet.create({
         width: 275, 
         margin: 12, //Length apart of other Fields around it
         borderWidth: 1,
+        borderRadius: 5, // the higher the number the more curved the corners of the border are
         padding: 10, //Padding of placeholder
-      },  
+    },  
 })
 export default Register;
