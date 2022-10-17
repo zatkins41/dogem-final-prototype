@@ -9,6 +9,7 @@ import {
     Button,
     TouchableOpacity,
     Image,
+    Alert
 } from "react-native";
 
 const App = ({navigation })=> {
@@ -21,49 +22,40 @@ const App = ({navigation })=> {
     return (
 
         <View style={styles.container}>
-            <Text style={styles.titleText}>
+            {/* <Text style={styles.titleText}>
                 Contacts
-            </Text>
+            </Text> */}
 
-            <View style={styles.inputView}>
-                <TextInput
-                    style={styles.TextInput}
-                    placeholder="Contact first name."
-                    placeholderTextColor="#DDDDDD"
-                    onChangeText={(fname) => setFname(fname)}
-                />
-            </View>
+            <Text style = {styles.dogText}>   First Name: *</Text>
+            <TextInput
+            style={styles.input}
+            placeholder="Contact first name"
+            onChangeText={(fname) => setFname(fname)}
+            />
 
-            <View style={styles.inputView}>
-                <TextInput
-                    style={styles.TextInput}
-                    placeholder="Contact last name"
-                    placeholderTextColor="#DDDDDD"
-                    onChangeText={(lname) => setLname(lname)}
-                />
-            </View>
+            <Text style = {styles.dogText}>   Last Name: *</Text>
+            <TextInput
+            style={styles.input}
+            placeholder="Contact last name"
+            onChangeText={(lname) => setLname(lname)}
+            />
 
-            <View style={styles.inputView}>
-                <TextInput
-                    style={styles.TextInput}
-                    placeholder="Contact's Phone #."
-                    placeholderTextColor="#DDDDDD"
-                    onChangeText={(phone) => setPhone(phone)}
-                />
-            </View>
+            <Text style = {styles.dogText}>   Phone Number: *</Text>
+            <TextInput
+            style={styles.input}
+            placeholder="Enter digits only"
+            onChangeText={(phone) => setPhone(phone)}
+            />
 
-            <View style={styles.inputView}>
-                <TextInput
-                    style={styles.TextInput}
-                    placeholder="Contact's Email."
-                    placeholderTextColor="#DDDDDD"
-                    onChangeText={(email) => setEmail(email)}
-                />
-            </View>
+            <Text style = {styles.dogText}>   Email: *</Text>
+            <TextInput
+            style={styles.input}
+            placeholder="Example@email.com"
+            onChangeText={(email) => setEmail(email)}
+            />
 
-            <TouchableOpacity style={styles.loginBtn} onPress={() => navigation.navigate('Login')}>
+            <TouchableOpacity style={styles.contactBtn} onPress={() => Alert.alert('Contact Added')}>
                 <Text style={styles.loginText}>Add Contact</Text>
-
             </TouchableOpacity>
         </View>
     );
@@ -80,15 +72,25 @@ const styles = StyleSheet.create({
     image: {
         marginBottom: 40,
     },
-
-    inputView: {
-        backgroundColor: "#FFFFFF",
-        width: "70%",
-        height: 45,
-        marginBottom: 20,
-        alignItems: "center",
+    dogText: {
+        color: "FFFFFF",
+        fontSize:20,
     },
-
+    input: {
+        height: 40,
+        width: 275, 
+        margin: 12,
+        borderWidth: 1,
+        borderRadius: 5,
+        padding: 10, //Padding of placeholder
+    },  
+    inputView: {
+        height: 40,
+        width: 275, 
+        margin: 12, 
+        borderWidth: 1,
+        padding: 10, 
+    },
     TextInput: {
         height: 50,
         flex: 1,
@@ -101,7 +103,7 @@ const styles = StyleSheet.create({
         marginBottom: 30,
     },
 
-    loginBtn: {
+    contactBtn: {
         width: "80%",
         borderRadius: 25,
         height: 50,
