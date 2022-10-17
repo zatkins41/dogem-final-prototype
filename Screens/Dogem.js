@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {useEffect, useState} from 'react';
-//import * as Linking from 'expo-linking';
+import * as Linking from 'expo-linking';
 import * as SMS from 'expo-sms';
 import {
   StyleSheet,
@@ -47,6 +47,9 @@ const App = () => {
       );
       console.log(result);
     };
+  const _pressCall = () => {
+        Linking.openURL(`tel:${phoneNum}`);
+    }
   
     return (
   
@@ -84,7 +87,8 @@ const App = () => {
 
           <TouchableOpacity
           activeOpacity={0.7}
-          style={styles.buttonStyle}>
+          style={styles.buttonStyle}
+          onPress={_pressCall}>
           <Text style={styles.buttonTextStyle}>Phone Call</Text>
           </TouchableOpacity>
       </View>
