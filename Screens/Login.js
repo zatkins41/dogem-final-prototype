@@ -19,7 +19,7 @@ const Login = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <Text style={styles.titleText}>
-                DogEm
+                Contacts List
             </Text>
             <View style={styles.myList}>
             <FlatList
@@ -36,8 +36,8 @@ const Login = ({ navigation }) => {
                 />
             </View>
 
-            <TouchableOpacity>
-                <Text style={styles.forgot_button} onPress={() => navigation.navigate('Contact')}>Add or Edit Contact</Text>
+            <TouchableOpacity style={styles.contactBtn} onPress={() => navigation.navigate('Contact')}>
+                <Text  style={styles.dogText}>Add Contact</Text>
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.DogemBtn} onPress={() => navigation.navigate('Dogem')}>
@@ -75,11 +75,22 @@ const styles = StyleSheet.create({
         marginTop: 40,
         marginLeft: 90,
         backgroundColor: "#1035AC",
+        borderRadius: 5
 
     },
     dogText: {
-        color: "FFFFFF",
+        color: "#ffffff",
         fontSize:20,
+    },
+    contactBtn:{
+        width: "50%",
+        height: 50,
+        alignItems: "center",
+        justifyContent: "center",
+        marginTop: 40,
+        marginLeft: 90,
+        backgroundColor: "#1035AC",
+        borderRadius: 5
     }
 
 })

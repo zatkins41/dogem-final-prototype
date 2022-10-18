@@ -12,7 +12,7 @@ import {
 } from "react-native";
 
 const App = ({navigation })=> {
-    const [email, setEmail] = useState('');
+    const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
     return (
@@ -25,8 +25,8 @@ const App = ({navigation })=> {
             <View style={styles.inputView}>
                 <TextInput
                     style={styles.TextInput}
-                    placeholder="Example@email.com"
-                    onChangeText={(email) => setEmail(email)}
+                    placeholder="Username"
+                    onChangeText={(username) => setUsername(username)}
                 />
             </View>
 
