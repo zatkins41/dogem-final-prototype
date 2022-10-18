@@ -55,7 +55,11 @@ const App = () => {
   
       <View style={styles.container}>
         <Text style={styles.titleText}> DogEm </Text>
-        
+        <Image 
+        style={{ width: 425, height: 300 }}
+        source={require("./Images/logo.jpg")} 
+        /> 
+
         <View style={styles.inputView}>
         <Text style={styles.titleTextsmall}>Enter Mobile Number</Text>
           <TextInput
